@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d2c">
+  <title>Green Valley Resident Portal</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #17251e;
+      background: #f2f6f2;
+      font-synthesis: none;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+
+    .app {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 24px 16px;
+      color: #f5fff8;
+      background: #123d2c;
+    }
+
+    .brand { padding: 0 10px; }
+    .brand strong { display: block; font-size: 17px; }
+    .brand span { display: block; margin-top: 5px; color: #b9d2c1; font-size: 12px; }
+    nav { display: grid; gap: 5px; }
+    nav a {
+      padding: 10px 12px;
+      border-radius: 9px;
+      color: #e4f1e8;
+      font-size: 14px;
+      text-decoration: none;
+      transition: background .15s ease;
+    }
+    nav a:hover, nav a[aria-current="page"] { color: #fff; background: #286247; }
+    nav a[aria-current="page"] { box-shadow: inset 3px 0 #8be0a8; }
+    .group-label {
+      margin: 4px 10px 3px;
+      color: #a9c7b4;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    main { display: flex; min-width: 0; flex-direction: column; }
+    header {
+      display: flex;
+      min-height: 68px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 24px;
+      border-bottom: 1px solid #e0e8e1;
+      background: #fff;
+    }
+    header h1 { margin: 0; font-size: 17px; font-weight: 650; }
+    header p { margin: 4px 0 0; color: #607267; font-size: 12px; }
+    .badge {
+      flex: none;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #1e6841;
+      background: #e8f5eb;
+      font-size: 11px;
+      font-weight: 650;
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      flex: 1;
+      min-height: calc(100vh - 68px);
+      border: 0;
+      background: #f8f9ff;
+    }
+
+    @media (max-width: 700px) {
+      .app { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+      aside { gap: 12px; padding: 15px 12px 10px; }
+      .brand { padding: 0 4px; }
+      nav { display: flex; gap: 5px; overflow-x: auto; padding-bottom: 2px; }
+      nav a { flex: none; padding: 8px 10px; }
+      .group-label { display: none; }
+      header { min-height: 60px; padding: 12px 16px; }
+      iframe { min-height: calc(100vh - 174px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div class="brand">
+        <strong>Green Valley</strong>
+        <span>Resident Portal</span>
+      </div>
+      <nav aria-label="Portal pages">
+        <span class="group-label">Resident</span>
+        <a href="./green_valley_resident_portal/code.html" target="portal-frame" aria-current="page">Sign in</a>
+        <a href="./resident_sign_up/code.html" target="portal-frame">Sign up</a>
+        <a href="./resident_dashboard/code.html" target="portal-frame">Dashboard</a>
+        <span class="group-label">Community services</span>
+        <a href="./parking_management/code.html" target="portal-frame">Parking</a>
+        <a href="./water_availability_quality/code.html" target="portal-frame">Water</a>
+        <a href="./complaints_maintenance/code.html" target="portal-frame">Complaints</a>
+        <a href="./waste_drainage_management/code.html" target="portal-frame">Waste &amp; drainage</a>
+        <a href="./healthy_food_directory/code.html" target="portal-frame">Healthy food</a>
+      </nav>
+    </aside>
+    <main>
+      <header>
+        <div>
+          <h1 id="page-title">Sign in</h1>
+          <p>Select a page to open it in the resident portal.</p>
+        </div>
+        <span class="badge">Green Valley Residency</span>
+      </header>
+      <iframe
+        name="portal-frame"
+        title="Green Valley resident portal page"
+        src="./green_valley_resident_portal/code.html">
+      </iframe>
+    </main>
+  </div>
+  <script>
+    const pageTitle = document.getElementById("page-title");
+    const pageLinks = document.querySelectorAll("nav a");
+
+    pageLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        pageLinks.forEach((item) => item.removeAttribute("aria-current"));
+        link.setAttribute("aria-current", "page");
+        pageTitle.textContent = link.textContent.trim();
+      });
+    });
+  </script>
+</body>
+</html>

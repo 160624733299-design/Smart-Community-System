@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#9cf5bd", "surface-container-low": "#eff4ff", "on-surface": "#0d1c2e", "surface-container-high": "#dce9ff", "surface-container": "#e6eeff", "tertiary": "#006141", "surface-tint": "#026d40", "on-primary-container": "#b5ffce", "outline-variant": "#bec9bf", "surface": "#f8f9ff", "on-error": "#ffffff", "surface-variant": "#d5e3fc", "on-secondary-fixed": "#00201d", "tertiary-fixed-dim": "#4edea3", "on-tertiary-fixed-variant": "#005236", "on-secondary": "#ffffff", "on-tertiary-container": "#b4ffd7", "on-primary-fixed-variant": "#00522f", "tertiary-container": "#007c55", "inverse-primary": "#81d9a2", "tertiary-fixed": "#6ffbbe", "on-primary-fixed": "#002110", "primary-container": "#1e7b4d", "background": "#f8f9ff", "primary-fixed-dim": "#81d9a2", "on-primary": "#ffffff", "secondary-fixed-dim": "#6bd8cb", "primary": "#006138", "error": "#ba1a1a", "secondary-fixed": "#89f5e7", "on-tertiary-fixed": "#002113", "on-secondary-container": "#006f66", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#005049", "on-error-container": "#93000a", "secondary": "#006a61", "surface-dim": "#ccdbf3", "inverse-surface": "#233144", "surface-bright": "#f8f9ff", "on-surface-variant": "#3f4941", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "on-background": "#0d1c2e", "secondary-container": "#86f2e4", "outline": "#6f7a71", "surface-container-highest": "#d5e3fc", "inverse-on-surface": "#eaf1ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-tablet": "1.5rem", "space-md": "1rem", "margin-desktop": "2.5rem", "gutter": "1rem", "space-xs": "0.25rem", "margin": "1rem", "space-xl": "2rem", "gutter-tablet": "1.25rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "display-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Green Valley Residency Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9wfXp5C9gHvdd8wxnhA3OxQLQX_gTuqpZSv6Vgnaez8iIkri8YOUrCZXW1pnHhPEoPRk4Aj-Z2MlccMPiGjYfxCsci1RtFzJZ1RECZ2ymYm_J5QTNJ6VbDIsWSSzcczNWf0w-LBHxkOKtOsNiLBQJwRIpPNZg8ButKXZjk6MLl76W1simDBBK_Hw3tMrd9KCfQdEQXCHaOGGTp-E23zyUCrsxK52jJhvipnjD-6IYCqiLsukvGm-K"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg text-primary truncate leading-tight">Green Valley</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wide">Demo</span></div><span class="font-headline-sm text-headline-sm text-on-surface truncate">Waste &amp; Drainage</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-space-xs bg-surface-container-low px-2.5 py-1.5 rounded-full shadow-[0_2px_8px_-2px_rgba(30,123,77,0.08)]"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-none">Shravani</span><span class="font-label-sm text-label-sm text-primary font-semibold leading-none mt-0.5">B-204</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCInReT70YwM0odyCVzIgVz048fNhFir3LjEY5RyNKhA8ZQHLYUAtzAdP4HP4ECnp1YRbcROMQ-QyssdLkFkKa1_0KoOIv3m_Oez8-t2093RhxzPBc8CVaPCjONhY__IkicpwHL8P9KZ-8QVEycExiJx4CYb1HC4ne5PuoErZ2piYFjq9SV7h7z9PptOjUOCQ2iaEJzt1ibl_OiaQh5fEylm91r67HVJnlVnxt1wopCECku5uWKHogY"/></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<div class="px-margin flex flex-col gap-space-md">
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span>Prototype Demo Data • Fictional Community</span>
+</div>
+<div class="flex items-center gap-1 text-primary font-label-md text-label-md">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Live Sensors</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary to-primary-container text-on-primary p-space-md shadow-[0_8px_24px_-4px_rgba(30,123,77,0.2)]">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-surface-container-lowest/10 blur-xl pointer-events-none"></div>
+<div class="flex items-start gap-space-sm relative z-10">
+<div class="w-10 h-10 rounded-full bg-on-primary/15 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px] text-primary-fixed" style="font-variation-settings: 'FILL' 1;">cloud_download</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">Next Collection Alert</span>
+<span class="px-2 py-0.5 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm font-semibold">Today</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-semibold mt-0.5 leading-snug">Wet Waste Collection at 8:00 AM</span>
+<p class="font-body-sm text-body-sm text-on-primary/90 mt-1">Door-to-door green bin collection currently rolling through Block B corridors.</p>
+<div class="mt-3 pt-2.5 border-t border-on-primary/15 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">sentiment_satisfied</span>
+<span class="font-label-sm text-label-sm text-on-primary-container">Bin status: Awaiting pickup at B-204</span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md active:scale-95 transition-transform shadow-sm" id="reminder-btn" onclick="toggleReminder()">
+<span class="material-symbols-outlined text-[16px]" id="reminder-icon">notifications_active</span>
+<span id="reminder-text">Set Reminder</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex p-1 rounded-xl bg-surface-container-high">
+<button class="flex-1 py-2 rounded-lg font-label-lg text-label-lg transition-all text-on-surface bg-surface-container-lowest shadow-sm flex items-center justify-center gap-1.5" id="tab-waste-btn" onclick="switchMainTab('waste')">
+<span class="material-symbols-outlined text-[18px] text-primary">recycling</span>
+<span>Waste System</span>
+</button>
+<button class="flex-1 py-2 rounded-lg font-label-lg text-label-lg transition-all text-on-surface-variant flex items-center justify-center gap-1.5" id="tab-drainage-btn" onclick="switchMainTab('drainage')">
+<span class="material-symbols-outlined text-[18px]">water_voc</span>
+<span>Drainage &amp; Storm</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md" id="section-waste">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Weekly Pickups</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Scheduled community truck &amp; floor sweeps</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-low text-primary font-semibold">Wing B Zone</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,123,77,0.05)] flex items-start gap-space-sm relative overflow-hidden">
+<div class="w-1.5 absolute left-0 top-0 bottom-0 bg-primary"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">compost</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Wet Waste (Biodegradable)</span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                In Progress
+              </span>
+</div>
+<span class="font-label-md text-label-md text-primary mt-0.5">Every Day at 8:00 AM</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Kitchen scraps, fruit peelings, food leftovers. Handover in compostable green bags.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,123,77,0.05)] flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Dry Waste</span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Tomorrow</span>
+</div>
+<span class="font-label-md text-label-md text-secondary mt-0.5">Wed &amp; Sat at 8:00 AM</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Paper, packaging plastics, multi-layer pouches, rinse &amp; dry containers.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-[0_4px_20px_-2px_rgba(30,123,77,0.05)] flex flex-col justify-between min-h-[130px]">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-[20px] text-tertiary">inventory_2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Saturday</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface block leading-tight">Recyclables</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Glass, cardboard, clean metal cans.</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold mt-2">10:00 AM At Atrium</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-[0_4px_20px_-2px_rgba(30,123,77,0.05)] flex flex-col justify-between min-h-[130px]">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-[20px] text-outline">devices_other</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Monthly</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface block leading-tight">E-Waste Hub</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Old wires, batteries, small electronics.</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-semibold mt-2">1st Sunday • 9 AM</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,123,77,0.05)] flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-label-lg text-label-lg text-on-surface">Compost Rewards Club</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">+10 Credits Earned</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Flat B-204 has segregated organic kitchen waste for 18 consecutive days. You are in the top 5% of Block B!</p>
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface">
+<span>Community Compost Target</span>
+<span class="font-semibold text-primary">280 / 300 pts</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 93%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">20 points remaining for 5kg Free Organic Fertilizer delivery.</span>
+</div>
+<button class="w-full mt-1 py-2.5 px-3 rounded-lg bg-surface-container-low text-primary font-label-md text-label-md flex items-center justify-between" onclick="toggleGuidelines()">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>View Segregation Guidelines &amp; Color Code</span>
+</span>
+<span class="material-symbols-outlined text-[18px] transition-transform" id="guidelines-chevron">expand_more</span>
+</button>
+<div class="hidden flex-col gap-2.5 pt-2 text-on-surface-variant font-body-sm text-body-sm" id="guidelines-body">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2">
+<span class="w-3 h-3 rounded-full bg-primary mt-1 flex-shrink-0"></span>
+<div><strong class="text-on-surface">Green Bin (Wet):</strong> Cooked food, vegetable peels, tea bags, garden leaves, eggshells. No plastic wrap or aluminum foil.</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary mt-1 flex-shrink-0"></span>
+<div><strong class="text-on-surface">Blue Bin (Dry):</strong> Milk packets (washed), carton boxes, PET bottles, clean plastic containers, grocery paper bags.</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-start gap-2">
+<span class="w-3 h-3 rounded-full bg-error mt-1 flex-shrink-0"></span>
+<div><strong class="text-on-surface">Red Bin (Sanitary / Haz):</strong> Bandages, wipes, expired meds, sharp razor blades safely packed in newspapers.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden flex-col gap-space-md" id="section-drainage">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Drainage Network</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">IoT silt sensors &amp; stormwater culverts</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Mostly Normal (75%)</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-error-container text-on-error-container shadow-[0_4px_20px_-2px_rgba(186,26,26,0.08)] flex flex-col gap-2 relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-error text-on-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+</div>
+<span class="font-label-lg text-label-lg font-semibold text-error">Block B Action In Progress</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error/10 text-error font-label-sm text-label-sm font-bold uppercase tracking-wider">High Priority</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container leading-relaxed">
+<strong>Maintenance Required:</strong> Dewatering &amp; heavy silt clearance ongoing near <strong>Block B Basement Parking Entry Ramp</strong> due to pre-monsoon runoffs.
+        </p>
+<div class="flex items-center justify-between pt-2 border-t border-error/15 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-on-error-container">
+<span class="material-symbols-outlined text-[16px] text-error">engineering</span>
+<span>Eco Drainage Team 2 deployed</span>
+</div>
+<span class="font-semibold text-error">Est. 2:30 PM today</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,123,77,0.05)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Block Telemetry Sensors</span>
+<span class="font-label-sm text-label-sm text-outline">Updated 4m ago</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Block A</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Clear • 12% Level</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Flow rate: 2.1 m³/h</span>
+</div>
+<div class="p-3 rounded-lg bg-error-container/40 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Block B (Your Block)</span>
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-semibold">Attention Required</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Water retention: 78%</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Block C</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Clear • 18% Level</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Flow rate: 1.8 m³/h</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Block D</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Clear • 9% Level</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Flow rate: 2.4 m³/h</span>
+</div>
+</div>
+<div class="relative w-full h-40 rounded-xl overflow-hidden mt-1 shadow-inner bg-surface-container">
+<div class="w-full h-full bg-cover bg-center flex items-end p-2.5" data-location="Green Valley Residency, Pune, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5h__RzU4IEyAI9emR5JMAR8TlyBxIlKEWDEtSoFJOhnP_S7O5jGlBosAiMDrtID_zOAw2PQ5ZVetPfr6keKm7YaziNcJ_KKD20kOGeF8gWHx7wVZR-shum-RFZly2yRULS_PR1rxxUIghMzUHv_iBXM5_IthXo9ZWPwYJ-kks4RHWgftnJtkGS8cGEMkymbLhjtlDoIQ_sFQTwGFoW6DajkZEhZopIMgiFFz3MFLJiHUAVDSz5KCS')">
+<div class="p-2 rounded-lg bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface flex items-center justify-between w-full shadow-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[18px]">location_on</span>
+<span class="font-label-sm text-label-sm font-semibold">Silt Pump 02 active at Ramp B</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Map View</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_-2px_rgba(30,123,77,0.05)] flex flex-col gap-3">
+<span class="font-headline-sm text-headline-sm text-on-surface">Recent Community Drainage Logs</span>
+<div class="flex flex-col gap-2.5" id="drainage-logs">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="text-on-surface">Storm Grate 14 Desilting</span>
+</div>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Yesterday</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="text-on-surface">Central Rain Harvester Backwash</span>
+</div>
+<span class="text-on-surface-variant font-label-sm text-label-sm">3 days ago</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-[0_8px_24px_-4px_rgba(30,123,77,0.2)] active:scale-[0.98] transition-transform" onclick="openReportModal()">
+<span class="material-symbols-outlined text-[20px]">report_problem</span>
+<span>Report Drainage / Waste Issue</span>
+</button>
+</div>
+</div>
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden items-end justify-center" id="report-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-t-2xl p-space-lg flex flex-col gap-space-md shadow-2xl animate-in slide-in-from-bottom duration-200">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">water_damage</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block leading-none">Report Issue</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Notify Green Valley Facility Staff</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant flex items-center justify-center" onclick="closeReportModal()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-3" onsubmit="handleFormSubmit(event)">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Category</label>
+<select class="w-full h-12 px-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md border-0 focus:outline-none focus:ring-2 focus:ring-primary" id="modal-category">
+<option value="Basement Drainage Overflow">Basement Drainage Overflow</option>
+<option value="Uncollected Green Bin">Uncollected Green Bin (Wet Waste)</option>
+<option value="Stormwater Grate Blockage">Stormwater Grate Blockage</option>
+<option value="Sewage Odor / Leakage">Sewage Odor / Leakage</option>
+<option value="Littering in Common Corridors">Littering in Common Corridors</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Location (Pre-selected for your wing)</label>
+<div class="flex items-center gap-2 px-3 h-12 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary text-[20px]">apartment</span>
+<input class="w-full bg-transparent border-0 focus:outline-none text-on-surface font-body-md text-body-md" id="modal-location" type="text" value="Block B — Flat B-204 Vicinity"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Description &amp; Urgent Notes</label>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md border-0 focus:outline-none focus:ring-2 focus:ring-primary" id="modal-desc" placeholder="Describe the water stagnation, odor, or bin status..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-2 p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">photo_camera</span>
+<span class="font-body-sm text-body-sm flex-1">Auto-attaching building telemetry data</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Attached</span>
+</div>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 h-12 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg active:scale-95 transition-transform" onclick="closeReportModal()" type="button">
+            Cancel
+          </button>
+<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-[0_4px_16px_-2px_rgba(30,123,77,0.3)] active:scale-95 transition-transform" type="submit">
+            Submit Quick Alert
+          </button>
+</div>
+</form>
+</div>
+</div>
+<div class="fixed bottom-20 left-4 right-4 z-50 flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-primary/20 translate-y-32 opacity-0 pointer-events-none transition-all duration-300" id="toast-notification">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface" id="toast-title">Alert Submitted Successfully</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="toast-desc">Facility desk assigned Ticket #GV-8492</span>
+</div>
+</div>
+<button class="text-on-surface-variant" onclick="hideToast()">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<script>
+  let reminderActive = false;
+
+  function switchMainTab(tab) {
+    const wasteSec = document.getElementById('section-waste');
+    const drainSec = document.getElementById('section-drainage');
+    const wasteBtn = document.getElementById('tab-waste-btn');
+    const drainBtn = document.getElementById('tab-drainage-btn');
+
+    if (tab === 'waste') {
+      wasteSec.classList.remove('hidden');
+      drainSec.classList.add('hidden');
+      wasteBtn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      wasteBtn.classList.remove('text-on-surface-variant');
+      drainBtn.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      drainBtn.classList.add('text-on-surface-variant');
+    } else {
+      drainSec.classList.remove('hidden');
+      wasteSec.classList.add('hidden');
+      drainBtn.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      drainBtn.classList.remove('text-on-surface-variant');
+      wasteBtn.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      wasteBtn.classList.add('text-on-surface-variant');
+    }
+  }
+
+  function toggleGuidelines() {
+    const body = document.getElementById('guidelines-body');
+    const chevron = document.getElementById('guidelines-chevron');
+    if (body.classList.contains('hidden')) {
+      body.classList.remove('hidden');
+      body.classList.add('flex');
+      chevron.style.transform = 'rotate(180deg)';
+    } else {
+      body.classList.add('hidden');
+      body.classList.remove('flex');
+      chevron.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function toggleReminder() {
+    reminderActive = !reminderActive;
+    const text = document.getElementById('reminder-text');
+    const icon = document.getElementById('reminder-icon');
+    if (reminderActive) {
+      text.innerText = 'Reminder Set';
+      icon.innerText = 'notifications_active';
+      showToast('Push Notification Active', 'You will receive an alert at 7:45 AM before door sweeps.');
+    } else {
+      text.innerText = 'Set Reminder';
+      icon.innerText = 'notifications_none';
+      showToast('Reminder Cleared', 'Morning waste collection alert has been disabled.');
+    }
+  }
+
+  function openReportModal() {
+    const modal = document.getElementById('report-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeReportModal() {
+    const modal = document.getElementById('report-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const category = document.getElementById('modal-category').value;
+    const desc = document.getElementById('modal-desc').value || 'Resident flagged urgent investigation';
+    closeReportModal();
+
+    const logsContainer = document.getElementById('drainage-logs');
+    if (logsContainer) {
+      const newLog = document.createElement('div');
+      newLog.className = 'flex items-center justify-between p-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm border-l-2 border-primary';
+      newLog.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[18px] text-primary">pending_actions</span>
+          <span class="text-on-surface">${category} (B-204)</span>
+        </div>
+        <span class="text-primary font-label-sm text-label-sm font-semibold">Just Now</span>
+      `;
+      logsContainer.prepend(newLog);
+    }
+
+    showToast('Quick Alert Dispatched', `Maintenance ticket logged for ${category}. Facility team notified.`);
+  }
+
+  function showToast(title, desc) {
+    const toast = document.getElementById('toast-notification');
+    document.getElementById('toast-title').innerText = title;
+    document.getElementById('toast-desc').innerText = desc;
+    toast.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      hideToast();
+    }, 4000);
+  }
+
+  function hideToast() {
+    const toast = document.getElementById('toast-notification');
+    toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-label-md"><div class="flex items-center overflow-x-auto no-scrollbar h-16 px-space-xs justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-label-sm whitespace-nowrap">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="parking" href="#"><span class="material-symbols-outlined text-[20px]">local_parking</span><span class="font-label-sm text-label-sm whitespace-nowrap">Parking</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="water" href="#"><span class="material-symbols-outlined text-[20px]">water_drop</span><span class="font-label-sm text-label-sm whitespace-nowrap">Water</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="complaints" href="#"><span class="material-symbols-outlined text-[20px]">report_problem</span><span class="font-label-sm text-label-sm whitespace-nowrap">Complaints</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="waste" href="#"><span class="material-symbols-outlined text-[20px]">recycling</span><span class="font-label-sm text-label-sm whitespace-nowrap">Waste</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="food" href="#"><span class="material-symbols-outlined text-[20px]">restaurant</span><span class="font-label-sm text-label-sm whitespace-nowrap">Food</span></a></div></nav></body></html>

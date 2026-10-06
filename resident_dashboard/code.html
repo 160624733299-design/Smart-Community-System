@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#9cf5bd", "surface-container-low": "#eff4ff", "on-surface": "#0d1c2e", "surface-container-high": "#dce9ff", "surface-container": "#e6eeff", "tertiary": "#006141", "surface-tint": "#026d40", "on-primary-container": "#b5ffce", "outline-variant": "#bec9bf", "surface": "#f8f9ff", "on-error": "#ffffff", "surface-variant": "#d5e3fc", "on-secondary-fixed": "#00201d", "tertiary-fixed-dim": "#4edea3", "on-tertiary-fixed-variant": "#005236", "on-secondary": "#ffffff", "on-tertiary-container": "#b4ffd7", "on-primary-fixed-variant": "#00522f", "tertiary-container": "#007c55", "inverse-primary": "#81d9a2", "tertiary-fixed": "#6ffbbe", "on-primary-fixed": "#002110", "primary-container": "#1e7b4d", "background": "#f8f9ff", "primary-fixed-dim": "#81d9a2", "on-primary": "#ffffff", "secondary-fixed-dim": "#6bd8cb", "primary": "#006138", "error": "#ba1a1a", "secondary-fixed": "#89f5e7", "on-tertiary-fixed": "#002113", "on-secondary-container": "#006f66", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#005049", "on-error-container": "#93000a", "secondary": "#006a61", "surface-dim": "#ccdbf3", "inverse-surface": "#233144", "surface-bright": "#f8f9ff", "on-surface-variant": "#3f4941", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "on-background": "#0d1c2e", "secondary-container": "#86f2e4", "outline": "#6f7a71", "surface-container-highest": "#d5e3fc", "inverse-on-surface": "#eaf1ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-tablet": "1.5rem", "space-md": "1rem", "margin-desktop": "2.5rem", "gutter": "1rem", "space-xs": "0.25rem", "margin": "1rem", "space-xl": "2rem", "gutter-tablet": "1.25rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-lg": "1.5rem" }, "fontFamily": { "display-mobile": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-sm": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Green Valley Residency Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9wfXp5C9gHvdd8wxnhA3OxQLQX_gTuqpZSv6Vgnaez8iIkri8YOUrCZXW1pnHhPEoPRk4Aj-Z2MlccMPiGjYfxCsci1RtFzJZ1RECZ2ymYm_J5QTNJ6VbDIsWSSzcczNWf0w-LBHxkOKtOsNiLBQJwRIpPNZg8ButKXZjk6MLl76W1simDBBK_Hw3tMrd9KCfQdEQXCHaOGGTp-E23zyUCrsxK52jJhvipnjD-6IYCqiLsukvGm-K"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-lg text-label-lg text-primary truncate leading-tight">Green Valley</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wide">Demo</span></div><span class="font-headline-sm text-headline-sm text-on-surface truncate">Dashboard</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-space-xs bg-surface-container-low px-2.5 py-1.5 rounded-full shadow-[0_2px_8px_-2px_rgba(30,123,77,0.08)]"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface leading-none">Shravani</span><span class="font-label-sm text-label-sm text-primary font-semibold leading-none mt-0.5">B-204</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCInReT70YwM0odyCVzIgVz048fNhFir3LjEY5RyNKhA8ZQHLYUAtzAdP4HP4ECnp1YRbcROMQ-QyssdLkFkKa1_0KoOIv3m_Oez8-t2093RhxzPBc8CVaPCjONhY__IkicpwHL8P9KZ-8QVEycExiJx4CYb1HC4ne5PuoErZ2piYFjq9SV7h7z9PptOjUOCQ2iaEJzt1ibl_OiaQh5fEylm91r67HVJnlVnxt1wopCECku5uWKHogY"/></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-space-lg gap-space-lg">
+<!-- Greeting & Environmental Ambience Card -->
+<section class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/60 text-on-secondary-container shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide">Prototype Demo Data • Fictional Community</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">wb_twilight</span> 6:45 PM
+      </span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_-2px_rgba(30,123,77,0.06)] flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-primary-fixed/20 blur-xl pointer-events-none"></div>
+<div class="flex items-baseline justify-between z-10">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Good Evening, Shravani <span class="inline-block animate-bounce">👋</span></h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">B-204 • Green Valley Residency, Hyderabad</p>
+</div>
+</div>
+<!-- Micro Community Mood / Weather Strip -->
+<div class="mt-space-sm pt-space-sm bg-surface-container-low/70 -mx-space-md -mb-space-md px-space-md py-2.5 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-md text-label-md text-on-surface">Estate Air Index: <strong class="text-primary font-semibold">34 AQI (Pure)</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container bg-tertiary-fixed/30 px-2 py-0.5 rounded-full font-medium">Breeze: 26°C</span>
+</div>
+</div>
+</section>
+<!-- Community Live Status Section -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Community Live Status</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live telemetry</span>
+</div>
+<!-- 2x2 Bento Stat Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Water Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_16px_-2px_rgba(0,106,97,0.06)] flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Normal</span>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold">72%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">stored</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">∼18 hrs active supply</p>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Parking Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_16px_-2px_rgba(0,97,56,0.06)] flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-full bg-primary-fixed/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">local_parking</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">Available</span>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold">45</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">slots open</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 truncate">Visitor & extra bays</p>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 58%;"></div>
+</div>
+</div>
+<!-- Waste Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_16px_-2px_rgba(0,124,85,0.06)] flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">recycling</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed/30 text-on-tertiary-container font-label-sm text-label-sm">Today</span>
+</div>
+<div class="mt-3">
+<span class="font-label-lg text-label-lg text-on-surface block font-semibold">Wet Waste</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pickup at <strong class="text-on-surface font-medium">8:00 AM</strong></p>
+</div>
+<div class="flex items-center gap-1 mt-2 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Segregated bags
+        </div>
+</div>
+<!-- Drainage Status -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_16px_-2px_rgba(186,26,26,0.06)] flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-full bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">build</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">Block B</span>
+</div>
+<div class="mt-3">
+<span class="font-label-lg text-label-lg text-on-surface block font-semibold">Drainage</span>
+<p class="font-body-sm text-body-sm text-error mt-0.5 truncate font-medium">1 Maintenance issue</p>
+</div>
+<div class="flex items-center gap-1 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">hourglass_top</span> Crew working
+        </div>
+</div>
+</div>
+</section>
+<!-- Quick Actions Grid -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Quick Actions</h2>
+<span class="font-label-sm text-label-sm text-primary font-medium">Essential Portals</span>
+</div>
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Reserve Parking -->
+<a class="flex flex-col items-center justify-center text-center p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 active:scale-95 shadow-[0_2px_12px_-2px_rgba(30,123,77,0.05)] group" data-path="parking" href="../parking_management/code.html">
+<div class="w-12 h-12 rounded-full bg-primary-fixed/40 text-primary flex items-center justify-center mb-1.5 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">local_parking</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Reserve Parking</span>
+<span class="font-label-sm text-[10px] text-primary mt-0.5">Quick slot</span>
+</a>
+<!-- Check Water -->
+<a class="flex flex-col items-center justify-center text-center p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 active:scale-95 shadow-[0_2px_12px_-2px_rgba(30,123,77,0.05)] group" data-path="water" href="../water_availability_quality/code.html">
+<div class="w-12 h-12 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center mb-1.5 group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[24px]">water_drop</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Check Water</span>
+<span class="font-label-sm text-[10px] text-secondary mt-0.5">Purity & flow</span>
+</a>
+<!-- Report Complaint -->
+<a class="flex flex-col items-center justify-center text-center p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 active:scale-95 shadow-[0_2px_12px_-2px_rgba(30,123,77,0.05)] group" data-path="complaints" href="../complaints_maintenance/code.html">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center mb-1.5 group-hover:bg-on-surface group-hover:text-surface transition-colors">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Report Issue</span>
+<span class="font-label-sm text-[10px] text-tertiary mt-0.5">Direct desk</span>
+</a>
+<!-- Waste & Drainage -->
+<a class="flex flex-col items-center justify-center text-center p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 active:scale-95 shadow-[0_2px_12px_-2px_rgba(30,123,77,0.05)] group" data-path="waste" href="../waste_drainage_management/code.html">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed/30 text-tertiary flex items-center justify-center mb-1.5 group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[24px]">delete_sweep</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Waste & Flow</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">Schedules</span>
+</a>
+<!-- Healthy Food -->
+<a class="flex flex-col items-center justify-center text-center p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 active:scale-95 shadow-[0_2px_12px_-2px_rgba(30,123,77,0.05)] group" data-path="food" href="../healthy_food_directory/code.html">
+<div class="w-12 h-12 rounded-full bg-surface-variant text-on-surface flex items-center justify-center mb-1.5 group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">restaurant_menu</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Organic Food</span>
+<span class="font-label-sm text-[10px] text-primary mt-0.5">Farm co-op</span>
+</a>
+<!-- Green & Fitness -->
+<a class="flex flex-col items-center justify-center text-center p-space-sm rounded-xl bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-200 active:scale-95 shadow-[0_2px_12px_-2px_rgba(30,123,77,0.05)] group" data-path="green-fitness" href="#">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed/50 text-secondary flex items-center justify-center mb-1.5 group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[24px]">fitness_center</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Green & Fit</span>
+<span class="font-label-sm text-[10px] text-secondary mt-0.5">Clubs & trails</span>
+</a>
+</div>
+</section>
+<!-- My Status Section -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">My Resident Status</h2>
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-0.5" data-path="profile" href="#">
+        Unit B-204 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_-2px_rgba(30,123,77,0.05)] flex flex-col gap-space-md">
+<!-- Parking Item -->
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed/40 text-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Slot P-B-042</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-[10px]">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Honda Activa • <span class="font-mono text-on-surface">TS09AB1234</span></p>
+</div>
+</div>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low text-primary font-label-sm text-label-sm hover:bg-surface-container transition-colors">
+          Gate QR
+        </button>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Complaints Status -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container text-on-surface flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">task</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">My Complaints</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tap to inspect updates</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="px-2.5 py-1 rounded-full bg-error-container/60 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> 1 Active
+          </div>
+<div class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+            4 Resolved
+          </div>
+</div>
+</div>
+<div class="h-px w-full bg-surface-container"></div>
+<!-- Activities Status -->
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/40 text-tertiary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Community Activities</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[10px]">3 Joined</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary font-medium mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">psychiatry</span> Upcoming: Plantation Drive (Sun)
+            </p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px] self-center">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Community Visual Spotlights (Image Rich Integration) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Residency Life</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Photolog</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative rounded-xl overflow-hidden shadow-sm h-32 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Sunlit green residential terrace garden at Green Valley Residency Hyderabad with lush flowering plants, clay pots, and wooden benches under warm morning sunlight, shot from eye level with organic aesthetic and deep forest green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzKGHy6R2hs7s7yInt7Ur8lJ6kEVbbKOugpTLyQtI5p51Vfi2R723DlhBBM92i1sqiRCXRsrRQeqzl9bCI4pILHm9UagUgJ29YY-2xgRd2t9dn0juKCd7lJGwHRKyyOx9hPtQNN04yw5LgKEeL-DTqxngne1eiB9yIWY92uoUUMHXQ_a8-qo2cW6zBb6eEAyQ2ShFPA1FsaA-dRGM5XdNwevzvpNlKJIBE4EdEO5_6EYr30BoLyAvD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent flex items-end p-2.5">
+<span class="text-on-primary font-label-md text-label-md drop-shadow">Herbal Atrium</span>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-sm h-32 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Eco-friendly rainwater harvesting pond and solar panel canopy inside a serene modern gated community campus with clean architectural lines, tropical landscaping, reflecting tranquil clear water in midday natural illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiiapyiXNGVcSsyOBXU9sAC2v5aE3PYHFOtoDf_31OflOKEj537l8WQLyr12HoCk7ulRfM3mlTekc14dYXNNFHj3ZcC9CZy_4mpGrBVteQOfUSY5iUYt6jsozjnYhYaqXiNf89f31mEQOiXnmM9J4C---hN1tI9WpO85p4kb0qXq6eMJmCsqK-kG9XVh114w52qDrDNqbtLOiYpgosVxt-ws7DVXZ8A9UA7qkvR6LcxxUy7Tki_dSE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent flex items-end p-2.5">
+<span class="text-on-primary font-label-md text-label-md drop-shadow">Solar Harvesting Zone</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Announcements Section -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">campaign</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Announcements</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">3 New</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Announcement 1: Water Tank Cleaning -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_16px_-2px_rgba(0,0,0,0.04)] flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Water Tank Cleaning</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Essential</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Block B overhead water tank cleaning scheduled for <strong class="text-on-surface">Saturday, 10 October, 10:00 AM – 1:00 PM</strong>. Water pressure might temporarily reduce during these hours.
+        </p>
+<div class="flex items-center justify-between pt-1 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span> In 3 days</span>
+<span class="text-primary font-medium">Block B Facility Desk</span>
+</div>
+</div>
+<!-- Announcement 2: Plantation Drive -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_16px_-2px_rgba(30,123,77,0.06)] flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Plantation Drive</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">Community Drive</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Join your fellow residents for the community sapling plantation drive this <strong class="text-on-surface">Sunday at 7:00 AM</strong> at the Community Garden. Complimentary organic breakfast will be provided.
+        </p>
+<div class="flex items-center justify-between pt-1 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span> Central Courtyard
+          </span>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-transform" id="joinPlantationBtn">
+            Joined ✓
+          </button>
+</div>
+</div>
+<!-- Announcement 3: Parking Maintenance -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_16px_-2px_rgba(0,0,0,0.04)] flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Parking Maintenance</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">Advisory</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Parking area <strong class="text-on-surface">P-B</strong> is undergoing routine marking and floor scrubbing tomorrow from <strong class="text-on-surface">9:00 AM</strong>. Resident two-wheelers will retain normal access.
+        </p>
+<div class="flex items-center justify-between pt-1 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">event_seat</span> Tomorrow</span>
+<span class="text-tertiary font-medium">Security & Parking Wing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Hotline Assistance Float Bar -->
+<div class="bg-gradient-to-r from-primary-container to-primary text-on-primary rounded-xl p-space-md shadow-[0_8px_24px_-4px_rgba(30,123,77,0.2)] flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-on-primary/10 flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-semibold text-on-primary leading-tight">Security & Estate Desk</h3>
+<p class="font-body-sm text-body-sm text-on-primary/80">Dial Intercom: 101 or 102</p>
+</div>
+</div>
+<button class="px-3 py-2 rounded-lg bg-on-primary text-primary font-label-md text-label-md font-semibold active:scale-95 transition-transform flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">call</span> Call Desk
+    </button>
+</div>
+</div>
+<script>
+  (function() {
+    const btn = document.getElementById('joinPlantationBtn');
+    if (btn) {
+      let joined = true;
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        joined = !joined;
+        if (joined) {
+          btn.textContent = 'Joined ✓';
+          btn.className = 'px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-transform';
+        } else {
+          btn.textContent = 'Join Drive';
+          btn.className = 'px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold active:scale-95 transition-transform';
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-label-md"><div class="flex items-center overflow-x-auto no-scrollbar h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 transition-colors text-primary font-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-label-sm whitespace-nowrap">Home</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="parking" href="#"><span class="material-symbols-outlined text-[20px]">local_parking</span><span class="font-label-sm text-label-sm whitespace-nowrap">Parking</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="water" href="#"><span class="material-symbols-outlined text-[20px]">water_drop</span><span class="font-label-sm text-label-sm whitespace-nowrap">Water</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="complaints" href="#"><span class="material-symbols-outlined text-[20px]">report_problem</span><span class="font-label-sm text-label-sm whitespace-nowrap">Complaints</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="waste" href="#"><span class="material-symbols-outlined text-[20px]">recycling</span><span class="font-label-sm text-label-sm whitespace-nowrap">Waste</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="food" href="#"><span class="material-symbols-outlined text-[20px]">restaurant</span><span class="font-label-sm text-label-sm whitespace-nowrap">Food</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="green-&-fitness" href="#"><span class="material-symbols-outlined text-[20px]">nature_people</span><span class="font-label-sm text-label-sm whitespace-nowrap">Green & Fit</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="font-label-sm text-label-sm whitespace-nowrap">Alerts</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[20px]">account_circle</span><span class="font-label-sm text-label-sm whitespace-nowrap">Profile</span></a></div></nav></body></html>
