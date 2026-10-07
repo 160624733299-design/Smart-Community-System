@@ -415,6 +415,17 @@
     const desc = document.getElementById('modal-desc').value || 'Resident flagged urgent investigation';
     closeReportModal();
 
+    fetch('/api/complaints', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        title: `${category}: ${desc}`,
+        priority: 'High'
+      })
+    }).catch(function() {
+      console.warn('Waste alert could not be synced to backend.');
+    });
+
     const logsContainer = document.getElementById('drainage-logs');
     if (logsContainer) {
       const newLog = document.createElement('div');
@@ -449,4 +460,41 @@
     toast.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
     toast.classList.remove('translate-y-0', 'opacity-100');
   }
+
+  fetch('/api/waste')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      const statusText = document.querySelectorAll('span');
+      for (const node of statusText) {
+        if (node.textContent && node.textContent.includes('8:00 AM')) {
+          node.textContent = data.nextPickup || '8:00 AM';
+        }
+      }
+    })
+    .catch(function() {
+      console.warn('Waste data cannot be loaded from backend yet.');
+    });
+
+  fetch('/api/drainage')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (!data || !data.logs) return;
+      const logsContainer = document.getElementById('drainage-logs');
+      if (logsContainer) {
+        logsContainer.innerHTML = data.logs.map(function(log) {
+          return `
+            <div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low font-body-sm text-body-sm">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+                <span class="text-on-surface">${log}</span>
+              </div>
+              <span class="text-on-surface-variant font-label-sm text-label-sm">Live</span>
+            </div>
+          `;
+        }).join('');
+      }
+    })
+    .catch(function() {
+      console.warn('Drainage data cannot be loaded from backend yet.');
+    });
 </script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-label-md"><div class="flex items-center overflow-x-auto no-scrollbar h-16 px-space-xs justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-sm text-label-sm whitespace-nowrap">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="parking" href="#"><span class="material-symbols-outlined text-[20px]">local_parking</span><span class="font-label-sm text-label-sm whitespace-nowrap">Parking</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="water" href="#"><span class="material-symbols-outlined text-[20px]">water_drop</span><span class="font-label-sm text-label-sm whitespace-nowrap">Water</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="complaints" href="#"><span class="material-symbols-outlined text-[20px]">report_problem</span><span class="font-label-sm text-label-sm whitespace-nowrap">Complaints</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="waste" href="#"><span class="material-symbols-outlined text-[20px]">recycling</span><span class="font-label-sm text-label-sm whitespace-nowrap">Waste</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="food" href="#"><span class="material-symbols-outlined text-[20px]">restaurant</span><span class="font-label-sm text-label-sm whitespace-nowrap">Food</span></a></div></nav></body></html>
